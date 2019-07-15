@@ -7,17 +7,22 @@ import ReduxThunk from 'redux-thunk';
 import Reducers from './src/Reducers';
 
 import Preload from './src/Preload';
-//import Home from './src/Home';
+import Home from './src/Home';
+import Cardapios from './src/Cardapios';
+
 
 let store = createStore (Reducers, applyMiddleware (ReduxThunk));
 
 const Navegador = createStackNavigator ({
     Preload: {
       screen: Preload
+    },
+    Home: {
+      screen: Home
+    },
+    Cardapios: {
+      screen: Cardapios
     }
-   // Home: {
-  //    screen: Home
-  //  }
 });
 
 const AppContainer = createAppContainer (Navegador);
