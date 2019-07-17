@@ -9,7 +9,8 @@ import Reducers from './src/Reducers';
 import Preload from './src/Preload';
 import Home from './src/Home';
 import Cardapios from './src/Cardapios';
-
+import SignUp from './src/SignUp';
+import SignIn from './src/SignIn';
 
 let store = createStore (Reducers, applyMiddleware (ReduxThunk));
 
@@ -22,6 +23,12 @@ const Navegador = createStackNavigator ({
     },
     Cardapios: {
       screen: Cardapios
+    },
+    SignUp: {
+      screen: SignUp
+    },
+    SignIn: {
+      screen:SignIn
     }
 });
 
